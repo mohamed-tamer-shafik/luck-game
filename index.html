@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/master.css" />
+    <title>Luck game</title>
+  </head>
+  <body>
+    <div class="parent">
+      <button class="return hidden">Return</button>
+      <button class="how-to-play">How to Play?</button>
+      <div class="pop-up hidden">
+        <i class="fa-solid fa-x"></i>
+        <p>How to Play?</p>
+        <p>
+          1-there is two modes either you can play with your friend or against
+          the Computure
+          <br />
+          2-in two player mode each player will have a turn the turn end when
+          the player either press hold or when push the current and the number
+          appears is One
+          <br />
+          3-in the mode against computure player one plays at start then the
+          computure plays its turn when player one end his turn
+          <br />
+          4-when pressing on push current button a number between 1 and 6 is
+          generated if the number is 1 active player loses his current score and
+          switch to the other player occurs if the number is anything except 1
+          the number is stored in the active player current score
+          <br />
+          5-when pressing on hold all the current score of the active player is
+          added to the total score of this player
+          <br />
+          6-the first player reach 60 point win the game
+        </p>
+      </div>
+      <div class="overlay hidden"></div>
+      <div class="game-modes">
+        <div>Luck game</div>
+        <div data-mode="c" class="game-mode">Vs Computer</div>
+        <div data-mode="p" class="game-mode">Vs Player</div>
+      </div>
+      <div class="container hidden">
+        <div class="playerbox-0 playerbox active">
+          <div class="inner-container">
+            <div class="player-total-info">
+              <p class="first-player-name"></p>
+              <span class="player0-total-score">0</span>
+            </div>
+            <div class="player-current-info">
+              <p>current</p>
+              <span class="player0-current-score">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="game-buttons">
+          <button class="new-game">New Game</button>
+          <div class="random-number hidden">0</div>
+          <button class="push-current">push current</button>
+          <button class="hold-current">hold current</button>
+        </div>
+
+        <div class="playerbox-1 playerbox">
+          <div class="inner-container">
+            <div class="player-total-info">
+              <p class="second-player-name"></p>
+              <span class="player1-total-score">0</span>
+            </div>
+            <div class="player-current-info">
+              <p>current</p>
+              <span class="player1-current-score">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/master.js"></script>
+  </body>
+</html>
